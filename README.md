@@ -1,5 +1,7 @@
 # Identity Aware MCP Server for Tailscale
 
+<img width="1125" alt="TailscaleMCPIdentityHero" src="https://github.com/user-attachments/assets/1e05e3a6-019d-4e16-b591-3691bcee16e6" />
+
 Create an identiy aware MCP server that runs inside your private Tailscale network (Tailnet). This example levearges identity headers that are passed through to applications running behind `tailscale serve`.
 
 Using this as starting point you can create MCP servers that are identity aware (with access to the logged in user's email) and can access internal APIs or services on thier behalf.
