@@ -1,0 +1,29 @@
+services:
+  ts-serve-echo-mcp:
+    image: tailscale/tailscale:latest
+    container_name: ts-serve-echo-mcp
+    hostname: ts-mcp-echo
+    environment:
+      - TS_AUTHKEY=${TS_AUTHKEY}
+      - TS_SERVE_CONFIG=/config/echo.json
+      - TS_STATE_DIR=/var/lib/tailscale
+      - TS_USERSPACE=false
+      - TS_AUTH_ONCE=ture
+    volumes:
+      - ${PWD}/state:/var/lib/tailscale
+      - ${PWD}/config:/config
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    cap_add:
+      - net_admin
+    restart: unless-stopped
+  echo-mcp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ts-echo-mcp
+    container_name: ts-echo-mcp-container
+    network_mode: service:ts-serve-echo-mcp
+    depends_on:
+      - ts-serve-echo-mcp
+    restart: unless-stopped

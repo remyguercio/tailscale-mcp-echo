@@ -1,0 +1,10 @@
+[project]
+name = "tailscale-mcp-echo"
+version = "0.1.0"
+description = "This MCP returns the identity of the currently logged in user."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastmcp>=2.3.3",
+    "starlette>=0.46.2",
+]
