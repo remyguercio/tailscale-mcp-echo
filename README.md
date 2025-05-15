@@ -24,7 +24,7 @@ If you have an MCP Client that supports direct access to Streaming HTTP MCP serv
 
 Claude desktop does not currently support remote MCP servers (only stdio), but you can use the [mcp-remote](https://github.com/geelen/mcp-remote) tool (or any other proxy) to connect to it.
 
-1. Install mcp-remote with `npm install -g mcp-remote`.
+1. Install mcp-remote with `npm install -g mcp-remote`
 2. Add the following configuration to your Claude Desktop config file:
 
     ```json
@@ -37,6 +37,7 @@ Claude desktop does not currently support remote MCP servers (only stdio), but y
         }
     ```
 
+    You can find your tailnet name by visiting the [Tailscale admin console DNS page](https://login.tailscale.com/admin/dns).
 3. Restart Claude Desktop.
-4. You should now see a new MCP server called `tailscale-remote-echo-example` with a greet tool.
+4. You should now see a new MCP server called `tailscale-remote-echo-example` with a `greet` tool.
 5. Ask Claude `Who am I logged into my tailnet as?` allow the tool, and wait for the response!
