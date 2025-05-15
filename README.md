@@ -34,7 +34,7 @@ Claude desktop does not currently support remote MCP servers (only stdio), but y
                     "command": "npx",
                     "args": [
                         "mcp-remote",
-                        "https://ts-mcp-echo.tailfeb87.ts.net/mcp"
+                        "https://ts-mcp-echo.yourtailnetname.ts.net/mcp"
                     ]
                 }
             }
