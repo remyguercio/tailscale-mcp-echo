@@ -25,7 +25,8 @@ Claude desktop does not currently support remote MCP servers (only stdio), but y
 1. Install mcp-remote with `npm install -g mcp-remote`.
 2. Add the following configuration to your Claude Desktop config file:
 
-    ``` "tailscale-remote-echo-example": {
+    ```json
+        "tailscale-remote-echo-example": {
             "command": "npx",
             "args": [
                 "mcp-remote",
