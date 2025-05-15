@@ -25,15 +25,19 @@ If you have an MCP Client that supports direct access to Streaming HTTP MCP serv
 Claude desktop does not currently support remote MCP servers (only stdio), but you can use the [mcp-remote](https://github.com/geelen/mcp-remote) tool (or any other proxy) to connect to it.
 
 1. Install mcp-remote with `npm install -g mcp-remote`
-2. Add the following configuration to your Claude Desktop config file:
+2. Add the following configuration to your `claude_desktop_config.json` file:
 
     ```json
-        "tailscale-remote-echo-example": {
-            "command": "npx",
-            "args": [
-                "mcp-remote",
-                "https://ts-mcp-echo.yourtailnetname.ts.net/mcp"
-            ]
+        {
+            "mcpServers": {
+                "tailscale-remote-echo-example": {
+                    "command": "npx",
+                    "args": [
+                        "mcp-remote",
+                        "https://ts-mcp-echo.tailfeb87.ts.net/mcp"
+                    ]
+                }
+            }
         }
     ```
 
