@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/remyguercio-tailscale-mcp-echo-badge.png)](https://mseep.ai/app/remyguercio-tailscale-mcp-echo)
+
 # Identity Aware MCP Server for Tailscale
 
 <img width="1125" alt="TailscaleMCPIdentityHero" src="https://github.com/user-attachments/assets/1e05e3a6-019d-4e16-b591-3691bcee16e6" />
