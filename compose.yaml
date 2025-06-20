@@ -26,4 +26,6 @@ services:
     network_mode: service:ts-serve-echo-mcp
     depends_on:
       - ts-serve-echo-mcp
+    environment:
+      - MCP_TRANSPORT=${MCP_TRANSPORT:-streamable-http}
     restart: unless-stopped
